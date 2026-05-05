@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     vector<int> numeros = {1, 2, 3, 4, 5};
-    vector<int> secuencia = {6, 2, 8, 9, 5};
+    vector<int> secuencia = {6, 2, 8, 4, 9};
     vector<int> final = {0, 0, 0, 0, 0};
     for(int i = 0; i < 5; i++)
     {
@@ -18,9 +18,13 @@ int main()
     {
         if(final[j] == 0)
         {
-            j = j + 1;
+            j++;
+            if(final[j] != 0)
+            {
+                cout << final[j] << ", ";
+            }
         }
-        cout << final[j] << ", ";
     }
     return 0;
 }
+
